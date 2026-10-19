@@ -786,7 +786,7 @@ export const Admin: React.FC = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {[1, 2, 3].map((place) => {
-                      const item = editionResults.find((r) => r.placement === place);
+                      const item = (editionResults || []).find((r) => r.placement === place);
                       return (
                         <div
                           key={place}

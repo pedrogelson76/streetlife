@@ -134,7 +134,7 @@ export const Community: React.FC = () => {
 
   const filteredLooks = looks.filter((look) => {
     if (selectedTag === 'all') return true;
-    return look.style_tags.includes(selectedTag);
+    return (look.style_tags || []).includes(selectedTag);
   });
 
   return (

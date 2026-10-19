@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>STREETLIFE — Redirecionando...</title>
+    <script>
+      // Redireciona qualquer rota direta do GitHub Pages para o SPA com HashRouter
+      var pathSegments = window.location.pathname.split('/').filter(Boolean);
+      var repoName = pathSegments.length > 0 ? pathSegments[0] : '';
+      var remainingPath = '/' + pathSegments.slice(1).join('/');
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      
+      if (repoName) {
+        window.location.replace('/' + repoName + '/#' + (remainingPath === '/' ? '' : remainingPath) + search + hash);
+      } else {
+        window.location.replace('/' + search + hash);
+      }
+    </script>
+  </head>
+  <body style="background:#050507; color:#ffffff; font-family:sans-serif; text-align:center; padding-top:20vh;">
+    <p>Carregando STREETLIFE...</p>
+  </body>
+</html>

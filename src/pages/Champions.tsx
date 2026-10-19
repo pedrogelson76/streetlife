@@ -47,9 +47,9 @@ export const Champions: React.FC = () => {
   };
 
   const currentSelection = history[selectedEditionIndex] || null;
-  const firstPlace = currentSelection?.results.find((r) => r.placement === 1);
-  const secondPlace = currentSelection?.results.find((r) => r.placement === 2);
-  const thirdPlace = currentSelection?.results.find((r) => r.placement === 3);
+  const firstPlace = currentSelection?.results?.find((r) => r.placement === 1);
+  const secondPlace = currentSelection?.results?.find((r) => r.placement === 2);
+  const thirdPlace = currentSelection?.results?.find((r) => r.placement === 3);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
